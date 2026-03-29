@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADIXLLL | Официальный сайт</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Настройка кастомных цветов Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0f1e', // Очень темный синий для фона
+                            card: 'rgba(255, 255, 255, 0.03)', // Полупрозрачный для карточек
+                            accent: '#3b82f6', // Основной синий акцент
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Эффект размытия фона (стекло) */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Плавное появление элементов */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans antialiased overflow-x-hidden">
+
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-900/30 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-900/20 rounded-full blur-[120px]"></div>
+    </div>
+
+    <main class="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 md:p-8">
+        
+        <div class="glass w-full max-w-4xl rounded-3xl p-8 md:p-12 shadow-2xl animate-fade-in opacity-0">
+            
+            <div class="flex items-center justify-between mb-10 border-b border-white/10 pb-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg">
+                        <span class="text-3xl font-bold">S</span>
+                    </div>
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter bg-gradient-to-r from-white via-blue-100 to-blue-400 bg-clip-text text-transparent">
+                            SADIXLLL
+                        </h1>
+                        <p class="text-blue-400 font-medium tracking-wide">Digital Creator / Developer</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full glass text-sm border border-white/5">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    Онлайн и работаю
+                </div>
+            </div>
+
+            <div class="mb-10 animate-fade-in opacity-0" style="animation-delay: 0.2s;">
+                <h2 class="text-xl font-semibold text-gray-300 mb-4 tracking-tight">Приветствую!</h2>
+                <p class="text-gray-400 text-lg leading-relaxed max-w-2xl">
+                    Я создаю уникальные цифровые решения, музыку и моды. Моя цель — объединять технологии и творчество для создания по-настоящему крутых продуктов. Это мой официальный уголок в сети.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in opacity-0" style="animation-delay: 0.4s;">
+                
+                <div class="glass p-6 rounded-2xl hover:border-blue-500/50 transition-all group cursor-pointer">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="p-3 bg-blue-600/10 rounded-xl text-blue-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">Мои Проекты</h3>
+                    </div>
+                    <p class="text-gray-400 text-base">Посмотрите мои последние разработки, веб-сайты и открытый исходный код на GitHub.</p>
+                </div>
+
+                <div class="glass p-6 rounded-2xl hover:border-purple-500/50 transition-all group cursor-pointer">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="p-3 bg-purple-600/10 rounded-xl text-purple-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">Музыка и Моды</h3>
+                    </div>
+                    <p class="text-gray-400 text-base">Свежие треки, звуковые паки и модификации для популярных игр.</p>
+                </div>
+
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in opacity-0" style="animation-delay: 0.6s;">
+                <p class="text-gray-500 text-sm">© 2026 SADIXLLL. Все права защищены.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Telegram</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">YouTube</a>
+                    <a href="#" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold text-sm transition-all transform hover:scale-105 active:scale-95 shadow-md">Связаться</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
